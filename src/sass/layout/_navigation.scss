@@ -1,0 +1,26 @@
+.nav {
+  justify-self: end;
+
+  &__list {
+    display: flex;
+    list-style: none;
+  }
+
+  &__item {
+    padding: 1rem 2rem;
+  }
+
+  &__link {
+    text-decoration: none;
+    font-size: 1.8rem;
+    color: $color-white;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.3s;
+  }
+
+  &__link:hover {
+    border-bottom: 2px solid $color-secondary;
+    color: $color-secondary;
+  }
+}

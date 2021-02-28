@@ -6,15 +6,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,700&display=swap"
+        rel="stylesheet">
+
+    <link rel="shortcut icon" href="src/img/favicon-16x16.png" type="image/x-icon" />
+
     <link rel="stylesheet" href="src/sass/main.scss" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
     <script defer src="src/js/controller.js"></script>
 
-    <title>Dream on screen</title>
+    <title>DREAMADIL | Dream on screen</title>
 </head>
 
 <body>
-    <h1>Dream on screen</h1>
-    <p>idemo</p>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <img src="src/img/logo.png" alt="Logo" class="header__logo" />
+            </div>
+
+            <form class="search">
+                <input type="text" class="search__field" placeholder="Search over 1,000,000 movies..." />
+                <button class="search__btn">
+                    Search
+                </button>
+            </form>
+
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a class="nav__link" href="#">MOVIE</a></li>
+                    <li class="nav__item"><a class="nav__link" href="#">TV SHOW</a></li>
+
+
+                </ul>
+            </nav>
+
+            <div class="header__position">
+                <p class="header__position-city">London, UK</p>
+                <div class="header__position-status"></div>
+            </div>
+
+        </header>
+        <div class="results">
+            results
+        </div>
+        <div class="content">
+            content
+        </div>
+        <footer class="footer">
+            footer
+        </footer>
+    </div>
 </body>
 
 </html>
