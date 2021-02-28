@@ -1,3 +1,37 @@
 .footer {
-  grid-column: center-start / center-end;
+  grid-column: full-start / full-end;
+  border-top: 1px solid $color-font;
+  padding: 0 7rem;
+
+  display: flex;
+  align-items: center;
+
+  &__copyright {
+    justify-self: center;
+    flex: 2;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__logo {
+    height: 60%;
+  }
+
+  &__social {
+    justify-self: flex-end;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+
+  &__icon {
+    width: 2rem;
+    height: auto;
+    fill: $color-white;
+    transition: all 0.2s;
+  }
+
+  &__icon:hover {
+    fill: $color-secondary;
+  }
 }
