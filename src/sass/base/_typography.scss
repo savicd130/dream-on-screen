@@ -1,0 +1,32 @@
+h1 {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 2rem 5rem;
+  position: relative;
+}
+
+h1::before {
+  content: '';
+  border-radius: 4px;
+  width: 0.8rem;
+  height: 2.6rem;
+  background-color: $color-secondary;
+  position: absolute;
+  margin-left: -1.5rem;
+}
+
+h1::after {
+  content: '';
+  position: absolute;
+  width: 0rem;
+  height: 0rem;
+  border-top: 1.4rem solid transparent;
+  border-bottom: 1.4rem solid transparent;
+  border-left: 2.7rem solid $color-secondary;
+  margin-left: 1rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}

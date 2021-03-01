@@ -27,11 +27,10 @@
   &__icon {
     width: 2rem;
     height: auto;
-    fill: $color-white;
     transition: all 0.2s;
   }
 
   &__icon:hover {
-    fill: $color-secondary;
+    opacity: 0.7;
   }
 }
