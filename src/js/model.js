@@ -1,6 +1,5 @@
-import { API_URL, API_KEY } from './config.js';
+import { API_URL, API_KEY, API_KEY2 } from './config.js';
 import { getJSON } from './helper.js';
-import star from '../img/star.png';
 
 export const state = {
   topMovie: [],
@@ -8,30 +7,10 @@ export const state = {
 
 export const topMoviesList = async function () {
   try {
-    const data = await getJSON(`${API_URL}/en/API/Top250Movies/k_1cc061uf`);
+    const data = await getJSON(`${API_URL}/en/API/Top250Movies/${API_KEY2}`);
 
-    console.log(data);
-    document.querySelector('.movies').innerHTML = '';
-
-    const markup = data.items
-      .map(type => {
-        return `
-        <div class="card">
-            <div class="card__star">
-            <p class="card__star-rating">${type.imDbRating}</p>
-            </div>
-            <div class="card__pic">
-            <img src="${type.image}" alt="${type.fullTitle}">
-            </div>
-            <div class="card__title">
-            <p>${type.fullTitle}</p>
-            </div>
-        </div>
-        `;
-      })
-      .join('');
-
-    document.querySelector('.movies').insertAdjacentHTML('beforeend', markup);
+    const size = data.items.map(el => el);
+    state.topMovie.push(size);
   } catch (err) {
     console.log(err);
   }

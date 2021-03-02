@@ -1,8 +1,12 @@
 import * as model from './model.js';
-import * as ViewsMovie from './view/topMovieViews.js';
+import ViewTopMovies from './view/topMovieViews.js';
 
 const controlTopMovie = async function () {
-  model.topMoviesList();
+  await model.topMoviesList();
+
+  ViewTopMovies.renderData(model.state.topMovie[0]);
+
+  ViewTopMovies.upadateOnDOM();
 };
 
 const init = function () {
