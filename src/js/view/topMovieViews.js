@@ -1,3 +1,5 @@
+import star from '../../img/star.png';
+
 class ViewTopMovies {
   _parentEl = document.querySelector('.movies');
   _data;
@@ -7,11 +9,11 @@ class ViewTopMovies {
   }
   upadateOnDOM() {
     this._parentEl.innerHTML = '';
-    const markup = this._data
-      .map(type => {
-        return `
+    const markup = this._data.map((type) => {
+      return `
         <div class="card">
             <div class="card__star">
+            <p class="star-feature">&#9733;</p> 
             <p class="card__star-rating">${type.imDbRating}</p>
             </div>
             <div class="card__pic">
@@ -22,9 +24,10 @@ class ViewTopMovies {
             </div>
         </div>
         `;
-      })
-      .join('');
-    document.querySelector('.movies').insertAdjacentHTML('beforeend', markup);
+    });
+
+    const pages = markup.splice(0, 12).join('');
+    document.querySelector('.movies').insertAdjacentHTML('beforeend', pages);
   }
 }
 

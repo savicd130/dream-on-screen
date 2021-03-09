@@ -1,26 +1,22 @@
 .movies {
   display: grid;
-  grid-template-columns: repeat(5, 10rem);
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
   margin: 5rem 5rem;
   grid-gap: 7rem;
 }
 
 .card {
-  width: 10rem;
-  height: 25rem;
   display: grid;
   justify-items: center;
   align-items: center;
   grid-row-gap: 1rem;
+
   &__star {
     display: flex;
     width: 6rem;
     align-items: center;
     justify-items: center;
     // padding: 1rem;
-    img {
-      width: 100%;
-    }
 
     &-rating {
       margin-left: 1rem;
@@ -31,6 +27,7 @@
   &__pic {
     img {
       border-radius: 5px;
+      width: 100%;
     }
   }
 
@@ -38,4 +35,8 @@
     font-size: 1.4rem;
     align-self: center;
   }
+}
+
+.star-feature {
+  font-size: 2.5rem;
 }

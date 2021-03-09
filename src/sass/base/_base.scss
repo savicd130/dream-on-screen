@@ -29,8 +29,8 @@ body {
   grid-template-rows: 10rem 1fr 10rem;
   grid-template-columns:
     [full-start] minmax(1rem, 1fr) [center-start] repeat(
-      9,
-      [col-start] minmax(min-content, 12.8rem) [col-end]
+      auto-fill,
+      [col-start] minmax(12.8rem, max-content) [col-end]
     )
     [center-end] minmax(1rem, 1fr) [full-end];
 }
